@@ -1,0 +1,18 @@
+%p#notice= notice
+
+.job_show
+
+  .job_title
+    = @job.title
+
+  .company_name
+    = @job.company_name
+
+  %p.job_description
+    = @job.description
+
+  = link_to 'Show More', @job.details_link, :class => "details_link"
+
+  = link_to 'Edit', edit_job_path(@job)
+  \|
+  = link_to 'Back', jobs_path
